@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Counter from '../components/Counter';
 
-export default () => <div>
+export default () => (
 	<Layout header="Other" title="Other page.">
-		<p>This is Other page.</p>
+		<Counter />
 		<hr/>
 		<Link href="/">
 			<button>
@@ -11,4 +12,4 @@ export default () => <div>
 			</button>
 		</Link>
 	</Layout>
-</div>
+);

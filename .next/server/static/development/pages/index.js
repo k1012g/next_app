@@ -93,6 +93,98 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Counter.js":
+/*!*******************************!*\
+  !*** ./components/Counter.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Counter; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/k1012g/Desktop/React_practice/next_app/components/Counter.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+class Counter extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "style", {
+      fontSize: "12pt",
+      padding: "5px 15px"
+    });
+
+    this.doAction = this.doAction.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  doAction(e) {
+    if (e.shiftKey) {
+      return this.props.dispatch({
+        type: 'DECREMENT'
+      });
+    } else {
+      return this.props.dispatch({
+        type: 'INCREMENT'
+      });
+    }
+
+    ;
+  }
+
+  reset() {
+    return this.props.dispatch({
+      type: 'RESET'
+    });
+  }
+
+  render() {
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, this.props.message, ": ", this.props.count), __jsx("button", {
+      style: this.style,
+      onClick: this.doAction,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, "Count"), __jsx("button", {
+      style: this.style,
+      onClick: this.reset,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, "Reset"));
+  }
+
+}
+;
+Counter = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(state => state)(Counter);
+
+/***/ }),
+
 /***/ "./components/Footer.js":
 /*!******************************!*\
   !*** ./components/Footer.js ***!
@@ -1971,20 +2063,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _static_Image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/Image */ "./static/Image.js");
+/* harmony import */ var _components_Counter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Counter */ "./components/Counter.js");
 var _jsxFileName = "/Users/k1012g/Desktop/React_practice/next_app/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   header: "Next",
   title: "Top page.",
   __source: {
@@ -1992,79 +2078,32 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 6
   },
   __self: undefined
-}, __jsx("p", {
+}, __jsx(_components_Counter__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
   },
   __self: undefined
-}, "Welcome to next.js!"), __jsx(_static_Image__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  fname: "21savage.jpg",
-  size: "250",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
 }), __jsx("hr", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 8
   },
   __self: undefined
 }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "./other",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 9
   },
   __self: undefined
 }, __jsx("button", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 10
   },
   __self: undefined
-}, "Go to Other page >>")))));
-
-/***/ }),
-
-/***/ "./static/Image.js":
-/*!*************************!*\
-  !*** ./static/Image.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Image; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/k1012g/Desktop/React_practice/next_app/static/Image.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-class Image extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-    this.fname = './static/' + props.fname;
-    this.size = props.size + "px";
-  }
-
-  render() {
-    return __jsx("img", {
-      width: this.size,
-      border: "1",
-      src: this.fname,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: this
-    });
-  }
-
-}
+}, "Go to Other page >>"))));
 
 /***/ }),
 
@@ -2085,7 +2124,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (__jsx("style", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 1
+    lineNumber: 3
   },
   __self: undefined
 }, `
@@ -2127,6 +2166,30 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 		color: #669;
 		font-size: 16pt;
 		margin: 0px;
+	}
+
+	hr{
+		margin: 25px 0px;
+	}
+
+	tr{
+		margin: 0px;
+	}
+
+	th{
+		border-bottom: 1px solid gray;
+		font-size: 14pt;
+		margin: 0px;
+		text-align: left;
+		padding: 0px 20px;
+	}
+
+	td{
+		border-bottom: 1px solid gray;
+		font-size: 14pt;
+		margin: 0px;
+		text-align: right;
+		padding: 0px 20px;
 	}
 `));
 
@@ -2251,6 +2314,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
 
 /***/ }),
 
